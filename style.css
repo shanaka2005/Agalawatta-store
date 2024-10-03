@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+}
+
+.navbar {
+    background: linear-gradient(to top, rgba(43, 41, 41, 0.836)0%, rgba(36, 32, 32, 0.897)100%), url(HPZM_sri-lanka_food-market-produce.jpg);
+    width: 100%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 120px;
+    left: 50px;
+    position: relative;
+}
+
+.navbar ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+    position: relative;
+    font-weight: bold;
+    font-size: large;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(248, 37, 0);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: rgb(75, 10, 10);
+}
+
+.content h1 {
+    font-size: 100px;
+    margin-top: 10px;
+}
+
+.content p {
+    text-align: center;
+    font-size: larger;
+    position: relative;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.img-container {
+    width: 100%;
+    display: flex;
+    animation: slide 12s infinite alternate;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    margin: 20px 10px;
+    border-radius: 25px;
+    border-color: #ff0808;
+    background: transparent;
+    font-size: large;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+}
+button a{
+    text-decoration: none;
+    list-style: none;
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    font-weight: bolder;
+}
+
+span {
+    background-color: #f71313;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 25px;
+    z-index: -1;
+    transition: 0.5s;
+    
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
+
+.navbar img {
+    animation: logorotation 5s infinite alternate;
+}
+
+@keyframes logorotation {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slide {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-25%);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    75% {
+        text-replace: translateX(-75%);
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .content {
+        visibility: collapse;
+    }
+    .phonetext {
+        visibility: visible;
+    }
+    .navbar {
+        visibility: collapse;
+    }
+}
